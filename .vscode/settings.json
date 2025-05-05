@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "socket.h": "c",
+        "csapp.h": "c",
+        "typeinfo": "c"
+    }
+}

@@ -2,6 +2,9 @@
     "name": "Proxylab Development Container",
     "dockerFile": "Dockerfile",
     "remoteUser": "jungle",
+    "runArgs": [
+        "-p", "8000:8000"
+    ],
     "customizations": {
         "vscode": {
             "extensions": [
