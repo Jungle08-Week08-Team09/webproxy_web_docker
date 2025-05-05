@@ -23,7 +23,7 @@ int main(void)
     // if ((buf = getenv("QUERY_STRING")) != NULL)
     // {
     //  sscanf(buf, "num1=%d&num2=%d", &n1, &n2);
-    // }
+    // }p
 
     /* Make the response body */
     sprintf(content, "<html><head><title>Adder Result</title></head><body>");

@@ -61,13 +61,13 @@ void doit(int fd)
   printf("Request headers:\n%s", buf);
   printf("%s", buf);
   sscanf(buf, "%s %s %s", method, uri, version);
-  if (strcasecmp(method, "GET"))
+  if (strcasecmp(method, "GET") && strcasecmp(method, "HEAD"))
   {
     clienterror(fd, method, "501", "Not implemented", "Tiny does not implement this method");
     return;
   }
   read_requesthdrs(&rio);
-
+  
   /* Parse URI from GET request */
   is_static = parse_uri(uri, filename, cgiargs);
   if (stat(filename, &sbuf) < 0)
@@ -173,6 +173,7 @@ void get_filetype(char *filename, char *filetype)
   else if (strstr(filename, ".gif")) strcpy(filetype, "image/gif");
   else if (strstr(filename, ".jpg")) strcpy(filetype, "image/jpeg");
   else if (strstr(filename, ".png")) strcpy(filetype, "image/png");
+  else if (strstr(filename, ".mp4")) strcpy(filetype, "video/mp4");
   // else if (strstr(filename, ".css")) strcpy(filetype, "text/css");
   // else if (strstr(filename, ".js")) strcpy(filetype, "application/javascript");
   else strcpy(filetype, "text/plain");
