@@ -17,8 +17,10 @@ int main(void)
     *p = '\0';
     strcpy(arg1, buf);
     strcpy(arg2, p + 1);
-    n1 = atoi(strchr(arg1, '=') + 1);
-    n2 = atoi(strchr(arg2, '=') + 1);
+    // n1 = atoi(strchr(arg1, '=') + 1);
+    // n2 = atoi(strchr(arg2, '=') + 1);
+    n1 = atoi(arg1);
+    n2 = atoi(arg2);
   }
 
   /* Make the response body */
