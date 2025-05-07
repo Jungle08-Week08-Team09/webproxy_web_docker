@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 # nop-server.py - This is a server that we use to create head-of-line
 #                 blocking for the concurrency test. It accepts a
@@ -17,4 +17,5 @@ serversocket.listen(5)
 while 1:
   channel, details = serversocket.accept()
   while 1:
-    continue
+    # continue
+    time.sleep(1)

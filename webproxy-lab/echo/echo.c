@@ -7,7 +7,7 @@ void echo(int connfd)
     rio_t rio; // Robust I/O 처리를 위한 구조체 변수 (연결된 파일 디스크립터, 내부적으로 사용할 읽기 버퍼, 현재 버퍼 내 위치, 남은 바이트 수 등 저장)
 
     Rio_readinitb(&rio, connfd);
-    // connfd에 연결된 소켓을 rio 객체에 연결해서, 그걸로 안전하게 읽겠다는 준비 작업임임
+    // connfd에 연결된 소켓을 rio 객체에 연결해서, 그걸로 안전하게 읽겠다는 준비 작업임
     // rio 구조체를 초기화, 어떤 소켓 디스크립터(connfd)에서 읽을지 설정
     // 이 함수를 호출한 이후, rio를 통해 connfd에서 데이터를 읽을 수 있음. Rio_readlineb() 같은 함수들이 이 rio 구조체를 활용해서 읽기를 수행
 

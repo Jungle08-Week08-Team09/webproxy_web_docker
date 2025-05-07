@@ -27,8 +27,10 @@ int main(void)
 
     /* Make the response body */
     sprintf(content, "<html><head><title>Adder Result</title></head><body>");
+
     sprintf(content + strlen(content), "<h1>Welcome to add.com</h1>");
     sprintf(content + strlen(content), "<p>QUERY_STRING=%s</p>", buf);
+    sprintf(content + strlen(content), "<p>THE Internet addition portal.</p>");
     sprintf(content + strlen(content), "<p>The answer is: %d + %d = %d</p>", n1, n2, n1 + n2);
     sprintf(content + strlen(content), "<p>Thanks for visiting!</p>");
     sprintf(content + strlen(content), "</body></html>");
